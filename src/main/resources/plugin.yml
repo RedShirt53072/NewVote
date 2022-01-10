@@ -1,0 +1,21 @@
+main: "com.gmail.akashirt53072.newvote.Main"
+name: "newvote"
+version: "0.0.0"
+api-version: "1.16"
+commands:
+  vote: 
+    description: vote start command
+    usage: "/vote <秒数> <候補1> <候補2> ・・・"
+    permission: newvote.normal
+  clickvote:
+    description: vote click command
+    usage: "投票のチャットクリックに使用"
+    permission: newvote.normal
+permissions:
+  newvote.normal:
+    description: all player
+    default: true
+  newvote.*:
+    description: commands
+    children:
+      newvote.normal: true
